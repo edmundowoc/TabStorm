@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Traffic Injector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <h1>🚀 Website Traffic Injector</h1>
+        <p class="subtitle">Automatyczne testowanie ruchu Playwright</p>
+
+        <form id="trafficForm" class="form-card">
+
+            <label>🔗 Adres URL</label>
+            <input type="url" id="url" placeholder="https://example.com" required>
+
+            <label>📊 Liczba wejść</label>
+            <input type="number" id="visits" min="1" max="500" placeholder="np. 20" required>
+
+            <label>🛡️ Typ proxy</label>
+            <select id="proxyType">
+                <option value="none">Brak proxy</option>
+                <option value="http">HTTP</option>
+                <option value="socks5">SOCKS5</option>
+            </select>
+
+            <label>🔑 Dane proxy (opcjonalne)</label>
+            <input type="text" id="proxyData" placeholder="login:hasło@ip:port">
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="ownership" required>
+                <label for="ownership">Potwierdzam, że ta strona należy do mnie</label>
+            </div>
+
+            <button type="submit" id="startBtn">Start 🔥</button>
+
+        </form>
+
+        <div id="loader" class="loader hidden"></div>
+
+        <pre id="output" class="output hidden"></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
