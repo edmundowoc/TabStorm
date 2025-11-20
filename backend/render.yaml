@@ -1,6 +1,9 @@
+renderYamlVersion: 1
+
 services:
   - type: web
-    name: tabstorm-backend
+    name: my-backend
+    rootDir: backend
     env: python
     plan: free
     buildCommand: |
